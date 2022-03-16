@@ -88,3 +88,17 @@ def calcula_taxa_juros(
     taxa_juros *= 100
     
     return taxa_juros
+
+
+def calcula_taxa_real(
+        taxa_aparente: float,
+        inflacao: float
+    ):
+    
+    taxa_aparente /= 100
+    inflacao /= 100
+    
+    taxa_real = (1 + taxa_aparente) / (1 + inflacao) - 1
+    taxa_real *= 100
+    
+    return taxa_real
